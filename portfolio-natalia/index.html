@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наталія Ромащенко — AI-контент, SMM та автоматизація під ключ</title>
+<meta name="description" content="Портфоліо: AI-мультфільми, музика, SMM-стратегія, чат-боти та автоматизація процесів. Економіст + технолог в одній особі.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ccffdc; --card:#FFFFFF; --card2:#F5F5F5;
+    --txt:#2E2E2E; --muted:#54604f; --accent:#66BB6A; --accent2:#FFD700;
+    --border:#bfe8c9;
+    --radius:16px;
+    --f-head:'Montserrat',system-ui,sans-serif;
+    --f-body:'Open Sans',system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--f-body);background:var(--bg);color:var(--txt);line-height:1.6}
+  h1,h2,h3,.logo,.kicker,.cta,nav ul a{font-family:var(--f-head)}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{color:#4c9c50}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(204,255,220,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+  nav .logo{font-weight:700;color:var(--txt)}
+  nav .logo span{color:var(--accent2)}
+  nav ul{display:flex;gap:18px;list-style:none;flex-wrap:wrap}
+  nav ul a{color:var(--txt);font-size:.85rem;font-weight:600}
+  nav ul a:hover{color:var(--accent)}
+  /* HERO */
+  header{padding:70px 0 50px}
+  .hero-grid{display:flex;align-items:center;gap:44px;justify-content:space-between}
+  .hero-photo{flex:0 0 auto;width:265px;max-width:34vw;border-radius:26px;border:5px solid #fff;box-shadow:0 14px 34px rgba(46,46,46,.22);transform:rotate(2deg)}
+  @media (max-width:820px){.hero-grid{flex-direction:column-reverse;align-items:stretch}.hero-photo{width:210px;max-width:60vw;transform:none;align-self:center;margin-bottom:6px}}
+  h1{font-weight:800;font-size:clamp(1.8rem,4.5vw,3rem);line-height:1.2;margin-bottom:16px;color:var(--txt)}
+  h1 em{font-style:normal;color:var(--accent)}
+  .sub{font-size:1.1rem;color:var(--muted);max-width:720px;margin-bottom:26px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+  .chip{background:var(--card);border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:.85rem;box-shadow:0 2px 6px rgba(46,46,46,.06)}
+  .cta{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:13px 28px;border-radius:999px;transition:.2s;box-shadow:0 4px 12px rgba(102,187,106,.35)}
+  .cta:hover{transform:translateY(-2px);background:#57a75b;color:#fff}
+  /* SECTIONS */
+  section{padding:56px 0;border-top:1px solid var(--border)}
+  section:nth-of-type(even){background:var(--card2)}
+  .kicker{color:#b8930a;text-transform:uppercase;letter-spacing:.15em;font-size:.75rem;font-weight:700;margin-bottom:8px}
+  h2{font-weight:700;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:10px;color:var(--txt)}
+  .lead{color:var(--muted);max-width:760px;margin-bottom:30px}
+  h3{font-weight:700;font-size:1.15rem;margin:34px 0 6px;color:var(--accent)}
+  h3:first-of-type{margin-top:0}
+  .note{color:var(--muted);font-size:.92rem;margin-bottom:16px;max-width:760px}
+  /* GRIDS */
+  .grid{display:grid;gap:16px;align-items:start}
+  .g3{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+  .card.wide{grid-column:span 2}
+  @media (max-width:600px){.card.wide{grid-column:span 1}}
+  .g2{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(46,46,46,.05)}
+  .card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .card video.v{aspect-ratio:9/16}
+  .card video.sq{aspect-ratio:1/1}
+  .yt-wrap{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+  .yt-wrap.v{aspect-ratio:9/16}
+  .yt-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .card .pad{padding:12px 14px}
+  .card .pad b{display:block;font-size:.95rem;color:var(--txt)}
+  .card .pad small{color:var(--muted)}
+  /* CASE */
+  .case{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px 24px;margin-bottom:16px;box-shadow:0 2px 8px rgba(46,46,46,.05)}
+  .case b.t{display:block;font-size:1.05rem;margin-bottom:8px;color:var(--txt);font-family:var(--f-head)}
+  .case .row{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;font-size:.95rem}
+  .case .row span:nth-child(odd){color:var(--accent);font-weight:700}
+  .audio-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 2px 8px rgba(46,46,46,.05)}
+  .audio-card b{display:block;margin-bottom:8px;font-size:.95rem;color:var(--txt)}
+  .audio-card audio{width:100%}
+  .flow{max-width:640px;border-radius:var(--radius);border:1px solid var(--border);display:block}
+  /* 24h */
+  .fast{background:linear-gradient(135deg,#fff8d6,#e8fff0);border:1px solid var(--accent2);border-radius:var(--radius);padding:28px;margin-top:10px}
+  .fast ul{list-style:none;margin-top:14px}
+  .fast li{padding:8px 0 8px 30px;position:relative}
+  .fast li::before{content:"⚡";position:absolute;left:0}
+  /* TICKER */
+  .ticker{background:var(--accent);color:#fff;overflow:hidden;white-space:nowrap;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .ticker-track{display:inline-block;white-space:nowrap;animation:ticker 28s linear infinite}
+  .ticker:hover .ticker-track{animation-play-state:paused}
+  .ticker span{font-family:var(--f-head);font-weight:700;font-size:.95rem;margin:0 22px;display:inline-block}
+  .ticker b{color:var(--accent2)}
+  @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+  footer{padding:44px 0 60px;border-top:1px solid var(--border);color:var(--muted);text-align:center}
+  footer .cta{margin-bottom:18px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">Наталія Ромащенко<span>.</span></div>
+  <ul>
+    <li><a href="#ai">AI-контент</a></li>
+    <li><a href="#smm">SMM</a></li>
+    <li><a href="#auto">Автоматизація</a></li>
+    <li><a href="#academic">Аналітика</a></li>
+    <li><a href="#fast">За 24 години</a></li>
+  </ul>
+</div></nav>
+
+<header><div class="wrap hero-grid">
+  <div>
+    <h1>Закриваю задачі <em>«під ключ»</em>:<br>від ідеї та сценарію — до готового мультфільму й налаштованого бота</h1>
+    <p class="sub">Економіст за освітою, технолог за складом розуму. Поєдную аналітичне мислення із сучасними AI-інструментами: створюю контент, який чіпляє емоційно, та автоматизацію, яка економить десятки годин рутини.</p>
+    <div class="chips">
+      <div class="chip">🎬 AI-мультиплікація</div>
+      <div class="chip">🎵 Музика та вокал (Suno)</div>
+      <div class="chip">📱 SMM і сторітелінг</div>
+      <div class="chip">🤖 Telegram-боти</div>
+      <div class="chip">⚙️ Автоматизація розсилок</div>
+      <div class="chip">🧠 Психологія в контенті</div>
+    </div>
+    <a class="cta" href="mailto:romashnatali1204@gmail.com">Написати мені</a>
+  </div>
+  <img class="hero-photo" src="media/img/portrait.png" alt="Наталія Ромащенко">
+</div></header>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  <span>🎬 AI-мультиплікація <b>✦</b></span><span>🎵 Музика та вокал (Suno) <b>✦</b></span><span>📱 SMM і сторітелінг <b>✦</b></span><span>🤖 Telegram-боти <b>✦</b></span><span>⚙️ Автоматизація розсилок <b>✦</b></span><span>🧠 Психологія в контенті <b>✦</b></span><span>🐍 Python-скрипти <b>✦</b></span><span>🔗 n8n-сценарії <b>✦</b></span><span>📊 Презентації та аналітика <b>✦</b></span><span>📚 Наукове редагування <b>✦</b></span><span>🎬 AI-мультиплікація <b>✦</b></span><span>🎵 Музика та вокал (Suno) <b>✦</b></span><span>📱 SMM і сторітелінг <b>✦</b></span><span>🤖 Telegram-боти <b>✦</b></span><span>⚙️ Автоматизація розсилок <b>✦</b></span><span>🧠 Психологія в контенті <b>✦</b></span><span>🐍 Python-скрипти <b>✦</b></span><span>🔗 n8n-сценарії <b>✦</b></span><span>📊 Презентації та аналітика <b>✦</b></span><span>📚 Наукове редагування <b>✦</b></span>
+</div></div>
+
+<!-- ===================== AI CONTENT ===================== -->
+<section id="ai"><div class="wrap">
+  <div class="kicker">Розділ 1 · Візуальний гачок</div>
+  <h2>AI-контент та креатив</h2>
+  <p class="lead">Повний цикл виробництва: сценарій → персонажі → анімація → озвучення → музика. Все нижче створено мною за допомогою AI-інструментів.</p>
+
+  <h3>📞 Замовити свій мультик</h3>
+  <p class="note">Рекламний ролик власної послуги — приклад того, як за 24 години з ідеї народжується готовий анімований ролик у фірмовому акварельному стилі.</p>
+  <div class="grid g3">
+    <div class="card"><div class="yt-wrap v"><iframe src="https://www.youtube.com/embed/hDvrLR9aOu4" title="Замовити мультик" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>Замовити мультик</b><small>Промо-ролик послуги · +380 63 432 12 72</small></div></div>
+  </div>
+
+  <h3>📺 Рекламні та бренд-ролики для бізнесу</h3>
+  <p class="note">Відео, створені для реальних брендів і клієнтів — від товарної реклами до пояснювальної анімації для державної компанії.</p>
+  <div class="grid g3">
+    <div class="card wide"><div class="yt-wrap"><iframe src="https://www.youtube.com/embed/D1pkCJ5CBxM" title="Реклама Solus" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>Реклама Solus</b><small>Продуктовий промо-ролик</small></div></div>
+    <div class="card"><video class="v" controls preload="none" poster="media/posters/aspak.jpg" src="media/video/aspak.mp4"></video><div class="pad"><b>ASPak — fashion-пакування</b><small>Відео для сайту aspak.com.ua</small></div></div>
+    <div class="card"><video class="v" controls preload="none" poster="media/posters/fortis_club.jpg" src="media/video/fortis_club.mp4"></video><div class="pad"><b>ФК «Fortis»</b><small>Промо дитячого футбольного клубу</small></div></div>
+    <div class="card"><div class="yt-wrap v"><iframe src="https://www.youtube.com/embed/MVoUzhUOY90" title="Київводоканал" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>«Київводоканал»</b><small>Як і коли надати показання лічильника — пояснювальна анімація</small></div></div>
+    <div class="card"><div class="yt-wrap"><iframe src="https://www.youtube.com/embed/QTE74wQnRrA" title="Голосуй за ОСББ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>«Голосуй за ОСББ»</b><small>Роз'яснювальне відео про участь у голосуванні ОСББ</small></div></div>
+  </div>
+
+  <h3>🎓 Вітальні та мотиваційні мультики</h3>
+  <p class="note">Персоналізовані анімовані відкритки — теплий подарунок замість звичайної картки чи букета.</p>
+  <div class="grid g3">
+    <div class="card"><div class="yt-wrap v"><iframe src="https://www.youtube.com/embed/qun1d5i4CzQ" title="Ви — наша мама" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>«Ви — наша мама»</b><small>Вітання до Дня вчителя</small></div></div>
+    <div class="card wide"><video controls preload="none" poster="media/posters/school_sun.jpg" src="media/video/school_sun.mp4"></video><div class="pad"><b>«Сонце в класі»</b><small>Мотиваційний мультик для школи</small></div></div>
+  </div>
+
+  <h3>🖼 Анімовані портрети на замовлення</h3>
+  <p class="note">Фото клієнта перетворюється на живий акварельний сюжет — подарунок, який запам'ятовується.</p>
+  <div class="grid g3">
+    <div class="card"><div class="yt-wrap v"><iframe src="https://www.youtube.com/embed/CRW2Od-_p9k" title="Акварельний портрет пари" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>Акварельний портрет пари</b><small>Персональний подарунок з фото</small></div></div>
+  </div>
+
+  <h3>🎭 Гумористичний сторітелінг</h3>
+  <p class="note">Локальний гумор та впізнавані образи — формат, який чудово працює для просування міст, районів і локальних спільнот.</p>
+  <div class="grid g3">
+    <div class="card"><video class="v" controls preload="none" poster="media/posters/troieshchyna_satire.jpg" src="media/video/troieshchyna_satire.mp4"></video><div class="pad"><b>Троєщина — стереотипи столиці</b><small>Сатиричний сторітелінг про район</small></div></div>
+  </div>
+
+  <h3>🎵 Музичне портфоліо</h3>
+  <p class="note">Пишу тексти, створюю музику та вокал під будь-яку задачу — від джинглів для бренду до повноцінних пісень (Suno/Udio).</p>
+
+  <p class="note" style="margin-top:0"><b>Ліричні відео:</b></p>
+  <div class="grid g3">
+    <div class="card"><div class="yt-wrap"><iframe src="https://www.youtube.com/embed/tWO-WBgxOKU" title="Алло? Ну як ти там?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>«Алло? Ну як ти там?»</b><small>Ліричне відео</small></div></div>
+    <div class="card"><video controls preload="none" poster="media/posters/kava_proseko_lyric.jpg" src="media/video/kava_proseko_lyric.mp4"></video><div class="pad"><b>«Кава-просеко» (Sax Party)</b><small>Ліричне відео</small></div></div>
+    <div class="card"><div class="yt-wrap"><iframe src="https://www.youtube.com/embed/YgZdPEUvkVs" title="Дощ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe></div><div class="pad"><b>«Дощ»</b><small>Акустична пісня про кохання</small></div></div>
+  </div>
+
+</div></section>
+
+<!-- ===================== SMM ===================== -->
+<section id="smm"><div class="wrap">
+  <div class="kicker">Розділ 2 · Стратегія</div>
+  <h2>SMM та особистий бренд</h2>
+  <p class="lead">Я не просто «пощу картинки» — я будую контент на психології аудиторії: кожен пост має свою емоційну задачу і місце у воронці продажів.</p>
+
+  <div class="case">
+    <b class="t">Підхід «Психологія + Продажі»</b>
+    <div class="row">
+      <span>Що це</span><span>Контент-план, де кожен пост/Reels має свою емоційну функцію: довіра, цікавість, страх втрати, полегшення, рішення.</span>
+      <span>Чому працює</span><span>Аналітичний склад мислення дозволяє прогнозувати реакцію аудиторії, а не вгадувати її.</span>
+      <span>Формати</span><span>Reels з субтитрами і динамічними заголовками, сторітелінг-каруселі, «експерт у кадрі».</span>
+    </div>
+  </div>
+  <div class="case">
+    <b class="t">Кейс: гумористичний сторітелінг про райони та міста</b>
+    <div class="row">
+      <span>Задача</span><span>Просування локальних спільнот та брендів через впізнавані образи й гумор, а не «сухі» оголошення.</span>
+      <span>Рішення</span><span>Сценарій + AI-персонажі, у яких стереотипи району стають приводом для доброго жарту й вірусного поширення.</span>
+      <span>Приклад</span><span>Ролик про Троєщину в розділі AI-контент вище — той самий підхід масштабується на будь-яке місто чи бренд.</span>
+    </div>
+  </div>
+  <div class="case">
+    <b class="t">Кейс: продуктова та бренд-реклама</b>
+    <div class="row">
+      <span>Задача</span><span>Показати продукт емоційно й сучасно без дорогої відеозйомки.</span>
+      <span>Рішення</span><span>Сценарії роликів, у яких продукт вплетений в історію; AI-візуали + авторська музика.</span>
+      <span>Приклад</span><span>Ролики Solus, ASPak та ФК «Fortis» у розділі вище — повний цикл: сценарій, відео, музика, монтаж.</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== AUTOMATION ===================== -->
+<section id="auto"><div class="wrap">
+  <div class="kicker">Розділ 3 · Суперсила</div>
+  <h2>Автоматизація та технології</h2>
+  <p class="lead">Те, що відрізняє мене від 90% SMM-фахівців: я не лише створюю контент, а й будую системи, які працюють без людини.</p>
+
+  <div class="case">
+    <b class="t">🤖 NataAI — Telegram-бот-адміністратор</b>
+    <div class="row">
+      <span>Задача</span><span>Розвантажити адміністратора групи: заявки, типові питання, спам.</span>
+      <span>Рішення</span><span>Python-бот: приймає замовлення, відповідає через AI (Claude/Gemini), модерує чат, чистить спам. Розгорнутий на Railway, працює 24/7.</span>
+      <span>Стек</span><span>Python, Telegram Bot API, Anthropic/Gemini API, Railway, GitHub.</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <b class="t">⚙️ Система автоматичної розсилки документів</b>
+    <div class="row">
+      <span>Задача</span><span>Щомісяця формувати сотні персоналізованих повідомлень і надсилати їх контрагентам.</span>
+      <span>Рішення</span><span>Повний цикл: Excel-база → автоматичне формування Word-документів → конвертація в PDF → розсилка через Gmail зі звітом-реєстром. Плюс написана повна документація та інструкції для працівників.</span>
+      <span>Результат</span><span>Рутина, що займала дні ручної роботи, виконується за години. Автоматизація економить ~20 годин на тиждень.</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <b class="t">🛠 Інші інструменти, які я створила</b>
+    <div class="row">
+      <span>Rozsharuvach</span><span>Десктопний застосунок (Electron/Node.js) для обробки багатошарових PDF та конвертації у Word.</span>
+      <span>n8n</span><span>Сценарії автоматизації: аналіз пошти, трекери, генерація звітів (з власною документацією по нодах).</span>
+      <span>MS Access</span><span>Бази даних з макросами, формами та звітами (облік клієнтів, платежів, розкладів).</span>
+      <span>Python-скрипти</span><span>Генерація документів, перевірка платежів, збирання .docx за держстандартами.</span>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== ACADEMIC ===================== -->
+<section id="academic"><div class="wrap">
+  <div class="kicker">Розділ 4 · Довіра</div>
+  <h2>Академічні та аналітичні проєкти</h2>
+  <p class="lead">Працюю зі «розумним» контентом для серйозних задач — від наукових текстів до бізнес-аналітики.</p>
+  <div class="grid g2">
+    <div class="case" style="margin:0">
+      <b class="t">📚 Наукове редагування та супровід</b>
+      <p class="note" style="margin:0">Магістерські й дисертаційні роботи з психології, економіки, менеджменту: структура, академічний стиль, оформлення за держстандартами, робота з джерелами. Конкретні роботи не публікую з міркувань конфіденційності клієнтів.</p>
+    </div>
+    <div class="case" style="margin:0">
+      <b class="t">📊 Презентації та аналітичні звіти</b>
+      <p class="note" style="margin:0">Економічні обґрунтування, стратегії повоєнного відновлення галузей (туризм, музейна справа, урбаністика), екологічний менеджмент, наукові презентації. Складне — зрозуміло і красиво.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== 24H ===================== -->
+<section id="fast"><div class="wrap">
+  <div class="kicker">Швидкість завдяки AI</div>
+  <h2>Що я можу зробити для вас за 24 години</h2>
+  <div class="fast">
+    <ul>
+      <li>Сценарій + анімований ролик для вашої послуги (30–60 сек) з авторською музикою</li>
+      <li>Простий Telegram-бот: запис на консультацію, відповіді на типові питання, збір заявок</li>
+      <li>Контент-план на місяць з емоційною логікою кожного поста</li>
+      <li>Автоматизація однієї рутинної задачі (розсилка, звіт, обробка документів)</li>
+    </ul>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="cta" href="mailto:romashnatali1204@gmail.com">romashnatali1204@gmail.com</a>
+  <p>Наталія Ромащенко · AI-контент · SMM · Автоматизація · 2026</p>
+</div></footer>
+
+</body>
+</html>
